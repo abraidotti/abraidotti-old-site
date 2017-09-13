@@ -5,10 +5,10 @@ console.log('cookies.js hooked up');
 // save it in a cookie
 
 var siteUserName = document.getElementById("fname").value;
-console.log('The site user name is ' + siteUserName + '.');
+console.log('The default site user name is ' + siteUserName);
 
 Cookies.set('userName', siteUserName);
-console.log(Cookies.get('userName'));
+console.log('Setting cookie with name value: ' + Cookies.get('userName'));
 
 document.getElementById('submitButton').onclick = function(event) { 
 	console.log('the button works for now')
