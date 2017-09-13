@@ -13,7 +13,6 @@ console.log('Setting cookie with name value: ' + Cookies.get('userName'));
 document.getElementById('submitButton').onclick = function(event) { 
 	console.log('the button works for now');
 	Cookies.set('userName', document.getElementById('fname').value);
-	console.log(Cookies.get('userName'));
 };
-//var siteUserName = Cookies.get('userName');
-//console.log(siteUserName);
+
+console.log('Hi ' + Cookies.get('userName') + '.');
