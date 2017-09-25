@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Alessandro Braidotti</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
 
-		<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<script type="text/javascript" src="js/main.js"></script>
+	  <!-- Optional JavaScript -->
+	  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	  <script type="text/javascript" src="js/main.js"></script>
 
 </head>
 
@@ -27,16 +25,17 @@
 
 	<section id="nav">
 	<div class="container">	
-		<nav class="navbar navbar-light navbar-static-top my-nav">
-		  <div class="container-fluid">	    
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="index.html">Alessandro Braidotti</a>
-		    </div>
-				  	<a href="index.html#about" class="btn navbar-btn my-nav-btn">About me</a>
-				  	<a href="index.html#projects" class="btn navbar-btn my-nav-btn">Projects</a>
-				  	<a href="index.html#gallery" class="btn navbar-btn my-nav-btn">Gallery</a>
-		  </div>
-		</nav>
+		<ul class="nav justify-content-center">
+		  <li class="nav-item my-nav-btn">
+		    <a class="nav-link rounded" href="#about">about</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#projects">projects</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#gallery">gallery</a>
+		  </li>
+		</ul>
 	</div>
 	</section>
 	<!-- end nav -->
@@ -82,9 +81,9 @@
 	<!-- end about me -->
 	<hr>
 	<!-- start gallery -->
+
 	<section id="gallery">
 	<p style="text-align: center">Here's a gallery of my cat, Micio.</p>
-	<body onLoad="showSlides()">
 
 	  <div class="slideshow-container">
 	    <div class="mySlides fade">
@@ -127,14 +126,15 @@
 	      <img src="images/galleryImages/micio8.jpg" style="width:100%">
 	      <div class="text">Eigth Micio</div>
 	    </div>
-	    <div class="mySlides fade">
-	      <div class="numbertext">9 / 9</div>
-	      <img src="images/galleryImages/micio9.jpg" style="width:100%">
-	      <div class="text">Ninth Micio</div>
-	    </div>
-	    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-	    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-	  </div><!-- end slideshow container -->
+			<div class="mySlides fade">
+		    <div class="numbertext">9 / 9</div>
+		    <img src="images/galleryImages/micio9.jpg" style="width:100%">
+		    <div class="text">Ninth Micio</div>
+	  	</div>
+
+  		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
   	<br>
   	<!-- start dot console -->
 	  <div style="text-align:center">
@@ -148,7 +148,7 @@
 	    <span class="dot" onclick="currentSlide(8)"></span> 
 	    <span class="dot" onclick="currentSlide(9)"></span>  
 	  </div>
-	</div> 
+	
 	</section>
 	<!-- end gallery -->
 
