@@ -1,18 +1,28 @@
 console.log('main.js works.');
-console.log('cookies.js hooked up');
 
-// get the value of an input
-// save it in a cookie
+var slideIndex = 1;
+//showSlides(slideIndex);
 
-var siteUserName = document.getElementById("fname").value;
-console.log('The default site user name is ' + siteUserName);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-Cookies.set('userName', siteUserName);
-console.log('Setting cookie with name value: ' + Cookies.get('userName'));
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-document.getElementById('submitButton').onclick = function(event) { 
-	console.log('the button works for now');
-	Cookies.set('userName', document.getElementById('fname').value);
-	console.log('Hi ' + Cookies.get('userName') + '.');
-};
-
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
