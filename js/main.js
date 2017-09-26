@@ -29,15 +29,25 @@ function showSlides(n) {
 }
 // end gallery
 
-// add page scroll animation on <a> clicks
 $(document).ready(function(){
 
-  // add visitation check cookie with text and hide button
-  // document.cookie = "visits=0";
+  // add visitation check cookie
+  if Cookies.get('newUser' === null) {
+    Cookies.set("newUser", 'true');
+  };
 
-  //   $("hide-cookie-text").click(function(){
-  //     $("cookie-banner").hide(1000);
-  // });
+  if (Cookies.get("newUser" === 'true')) {
+    $(".newUser-banner").show(200);
+    Cookies.set("newUser", 'false');
+  } else {
+    Cookies.set("newUser", 'true');
+  };
+  
+  //if user is new, user can hide banner
+  $("#newUser-banner-btn").click(function(){
+    console.log('New user banner hidden.');
+    $(".newUser-banner").hide(200);
+  });
 
   showSlides(slideIndex);
 
@@ -62,5 +72,5 @@ $(document).ready(function(){
         window.location.hash = hash;
       });
     }; // End if
-  });// end page scroll animation
-});
+  }); // end page scroll animation
+}); // end document.ready function

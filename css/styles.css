@@ -16,6 +16,13 @@ body {
 	background-color: #FFFFFF;
 }
 
+/* new user banner */
+.newUser-banner {
+  margin-top: 50px;
+  text-align: center;
+  display: none;
+}
+
 /*nav mods*/
 nav .nav {
   color: #f2f2f2;
