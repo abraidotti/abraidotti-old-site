@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   console.log('main.js is hooked up.');
 
+  // gallery
   var slideIndex = 1;
   showSlides(slideIndex);
 
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     slides[slideIndex-1].style.display = "block"; 
     dots[slideIndex-1].className += " active";
   }
+  // end gallery
 
   // add page scroll animation on <a> clicks
   $(document).ready(function(){

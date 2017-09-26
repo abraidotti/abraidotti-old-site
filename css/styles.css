@@ -4,19 +4,32 @@
 	box-sizing: border-box;
 }
 
+.header {
+  text-align: center;
+  padding: 200px 20px;
+  background-color: #77F0EE;
+  color: #fff;
+}
+
 body {
 	font: normal 16px Arial, Helvetica;
 	background-color: #FFFFFF;
 }
 
 /*nav mods*/
+nav .nav {
+  color: #f2f2f2;
+  text-decoration:none;
+}
 
-
+nav .nav a:hover {
+    color: #77F0EE;
+    text-decoration: underline;
+}
 
 /*main area mods*/
-
 .main-about-me {
-	height: 100%;
+  padding: 170px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -26,12 +39,6 @@ body {
 	height: 150px;
 	border-radius: 50%;
 }
-
-.footer {
-  position: absolute;
-  background-color: #FFFFFF;
-  text-align: right;
- }
 
 
 /* gallery CSS */
@@ -68,7 +75,7 @@ body {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: #f2f2f2;
 }
 
 /* Caption text */
@@ -130,3 +137,8 @@ body {
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+.footer {
+  background-color: #77F0EE;
+  text-align: right;
+ }

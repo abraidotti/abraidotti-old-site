@@ -26,19 +26,30 @@
 
 <body>
 
+	<section id="header">
+	<header class="header">
+		<h1>Alessandro Braidotti
+    </h1>
+    <h2>Web Developer
+    </h2>
+  </header>
+
+
 	<section id="nav">
 	<div class="container">	
-		<ul class="nav justify-content-center">
-		  <li class="nav-item my-nav-btn">
-		    <a class="nav-link rounded" href="#about">about</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#projects">projects</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#gallery">gallery</a>
-		  </li>
-		</ul>
+		<nav class="navbar fixed-top navbar-light bg-light justify-content-center">
+			<ul class="nav">
+			  <li class="nav-item my-nav-btn">
+			    <a class="nav-link rounded" href="#about">about</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#projects">projects</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#gallery">gallery</a>
+			  </li>
+			</ul>
+		</nav>
 	</div>
 	</section>
 	<!-- end nav -->
@@ -53,8 +64,9 @@
       		<img src="images/sandro.jpg" class="img-profile">
         </div>
         <div class="col-md-4">
-        	<h1 class="display-3">Hi.</h1>
-	        <p>I'm Sandro. I code for fun, write stories, and play in a band. I'm currently learning web development.</p>
+        	<h1 class="display-2">Hi.</h1>
+	        <p>I'm Sandro.</p> 
+	      	<p>I code for fun, write stories, and play in a band. I'm currently learning web development.</p>
        	</div>
     		<div class="col-md-2"></div>
     	</div>
@@ -82,76 +94,114 @@
 	</div>
 	</section>
 	<!-- end about me -->
-	<hr>
-	<!-- start gallery -->
-
-	<section id="gallery">
-	<p style="text-align: center">Here's a gallery of my cat, Micio.</p>
-
-	  <div class="slideshow-container">
-	    <div class="mySlides fade">
-	      <div class="numbertext">1 / 9</div>
-	      <img src="images/galleryImages/micio1.jpg" style="width:100%">
-	      <div class="text">First Micio</div>
-	    </div>
-	    <div class="mySlides fade">
-	      <div class="numbertext">2 / 9</div>
-	      <img src="images/galleryImages/micio2.jpg" style="width:100%">
-	      <div class="text">Second Micio</div>
-	    </div>
-	    <div class="mySlides fade">
-	      <div class="numbertext">3 / 9</div>
-	      <img src="images/galleryImages/micio3.jpg" style="width:100%">
-	      <div class="text">Third Micio</div>
-	    </div>
-	    <div class="mySlides fade">
-	      <div class="numbertext">4 / 9</div>
-	      <img src="images/galleryImages/micio4.jpg" style="width:100%">
-	      <div class="text">Fourth Micio</div>
-	    </div>
-	    <div class="mySlides fade">
-	      <div class="numbertext">5 / 9</div>
-	      <img src="images/galleryImages/micio5.jpg" style="width:100%">
-	      <div class="text">Fifth Micio</div>
-	    </div>
-	    <div class="mySlides fade">
-	      <div class="numbertext">6 / 9</div>
-	      <img src="images/galleryImages/micio6.jpg" style="width:100%">
-	      <div class="text">Sixth Micio</div>
-	    </div>
-	    <div class="mySlides fade">
-	      <div class="numbertext">7 / 9</div>
-	      <img src="images/galleryImages/micio7.jpg" style="width:100%">
-	      <div class="text">Seventh Micio</div>
-	    </div>
-	    <div class="mySlides fade">
-	      <div class="numbertext">8 / 9</div>
-	      <img src="images/galleryImages/micio8.jpg" style="width:100%">
-	      <div class="text">Eigth Micio</div>
-	    </div>
-			<div class="mySlides fade">
-		    <div class="numbertext">9 / 9</div>
-		    <img src="images/galleryImages/micio9.jpg" style="width:100%">
-		    <div class="text">Ninth Micio</div>
-	  	</div>
-
-  		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		</div>
-  	<br>
-  	<!-- start dot console -->
-	  <div style="text-align:center">
-	    <span class="dot" onclick="currentSlide(1)"></span> 
-	    <span class="dot" onclick="currentSlide(2)"></span> 
-	    <span class="dot" onclick="currentSlide(3)"></span>
-	    <span class="dot" onclick="currentSlide(4)"></span> 
-	    <span class="dot" onclick="currentSlide(5)"></span> 
-	    <span class="dot" onclick="currentSlide(6)"></span> 
-	    <span class="dot" onclick="currentSlide(7)"></span> 
-	    <span class="dot" onclick="currentSlide(8)"></span> 
-	    <span class="dot" onclick="currentSlide(9)"></span>  
-	  </div>
 	
+	<hr>
+
+	<!-- start projects section -->
+	<section id="projects">
+	<h1 style: align="center">projects</h1>
+		<div class="container">  	
+    	<div class="row">
+    	  
+    	  <div class="col-md-6">
+    	  	<div class="card" style="width: 20rem;">
+  					<img class="card-img-top" src="..." alt="script screencap">
+	  				<div class="card-body">
+	    				<h4 class="card-title">Minit Script</h4>
+	    				<p class="card-text">I built a micro-init script to scaffold a simple website for learning and practice.</p>
+	    				<a href="#" class="btn btn-primary">Open in new tab</a>
+	  				</div>
+					</div>
+    		</div>
+    		
+    		<div class="col-md-6">
+    	  	<div class="card" style="width: 20rem;">
+  					<img class="card-img-top" src="..." alt="OO JS screencap">
+  					<div class="card-body">
+    					<h4 class="card-title">Object Oriented JS exercise</h4>
+    					<p class="card-text">I build an object that user can modify and instantiate.</p>
+    					<a href="#" class="btn btn-primary">Open in new tab</a>
+  					</div>
+					</div>
+    	  </div>
+
+    	</div><!-- end row -->
+    </div><!-- end container -->
+	<!-- end projects section -->
+
+	<hr>
+	
+	<!-- start gallery -->
+	<section id="gallery">
+	<div class="container">
+		<div class="row">
+    	<div class="col-md-12">
+				<p style="text-align: center">And here's a gallery of my cat, Micio.</p>
+			  <div class="slideshow-container">
+			    <div class="mySlides fade">
+			      <div class="numbertext">1 / 9</div>
+			      <img src="images/galleryImages/micio1.jpg" style="width:100%">
+			      <div class="text">First Micio</div>
+			    </div>
+			    <div class="mySlides fade">
+			      <div class="numbertext">2 / 9</div>
+			      <img src="images/galleryImages/micio2.jpg" style="width:100%">
+			      <div class="text">Second Micio</div>
+			    </div>
+			    <div class="mySlides fade">
+			      <div class="numbertext">3 / 9</div>
+			      <img src="images/galleryImages/micio3.jpg" style="width:100%">
+			      <div class="text">Third Micio</div>
+			    </div>
+			    <div class="mySlides fade">
+			      <div class="numbertext">4 / 9</div>
+			      <img src="images/galleryImages/micio4.jpg" style="width:100%">
+			      <div class="text">Fourth Micio</div>
+			    </div>
+			    <div class="mySlides fade">
+			      <div class="numbertext">5 / 9</div>
+			      <img src="images/galleryImages/micio5.jpg" style="width:100%">
+			      <div class="text">Fifth Micio</div>
+			    </div>
+			    <div class="mySlides fade">
+			      <div class="numbertext">6 / 9</div>
+			      <img src="images/galleryImages/micio6.jpg" style="width:100%">
+			      <div class="text">Sixth Micio</div>
+			    </div>
+			    <div class="mySlides fade">
+			      <div class="numbertext">7 / 9</div>
+			      <img src="images/galleryImages/micio7.jpg" style="width:100%">
+			      <div class="text">Seventh Micio</div>
+			    </div>
+			    <div class="mySlides fade">
+			      <div class="numbertext">8 / 9</div>
+			      <img src="images/galleryImages/micio8.jpg" style="width:100%">
+			      <div class="text">Eigth Micio</div>
+			    </div>
+					<div class="mySlides fade">
+				    <div class="numbertext">9 / 9</div>
+				    <img src="images/galleryImages/micio9.jpg" style="width:100%">
+				    <div class="text">Ninth Micio</div>
+			  	</div>
+		  		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div><!-- end slideshow container -->
+		  	<br>
+		  	<!-- start dot console -->
+			  <div style="text-align:center">
+			    <span class="dot" onclick="currentSlide(1)"></span> 
+			    <span class="dot" onclick="currentSlide(2)"></span> 
+			    <span class="dot" onclick="currentSlide(3)"></span>
+			    <span class="dot" onclick="currentSlide(4)"></span> 
+			    <span class="dot" onclick="currentSlide(5)"></span> 
+			    <span class="dot" onclick="currentSlide(6)"></span> 
+			    <span class="dot" onclick="currentSlide(7)"></span> 
+			    <span class="dot" onclick="currentSlide(8)"></span> 
+			    <span class="dot" onclick="currentSlide(9)"></span>  
+			  </div>
+			</div><!-- end column -->
+		</div><!-- end row -->
+	</div><!-- end container -->
 	</section>
 	<!-- end gallery -->
 
@@ -159,7 +209,7 @@
     <div class="container">
       <span class="text-muted">© 2017 Alessandro Braidotti
       </span>
-      <p><a href="index.html#nav">back to top</a></p>
+      <p><a href="#header">back to top</a></p>
     </div>
 	</footer>
 
