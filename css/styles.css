@@ -34,6 +34,10 @@ nav .nav a:hover {
 	margin-bottom: 10px;
 }
 
+.about-me-block {
+  display: inline-block;
+}
+
 .img-profile {
 	width: 150px;
 	height: 150px;
@@ -47,7 +51,8 @@ nav .nav a:hover {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 600px;
+  max-width: 500px;
+  max-height: 500px;
   position: relative;
   margin: auto;
 }
