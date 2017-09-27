@@ -31,13 +31,14 @@ function showSlides(n) {
 
 $(document).ready(function(){
 
-  // Cookies.set("bannerShown", "");
 
+  //checks a cookie's value even if it doesn't exist yet
   if (Cookies.get("bannerShown") === "true") {
     // do nothing
   } else {
     $(".newUser-banner").show(200);
     console.log("New user banner shown.");
+    // create the cookie and set it to true
     Cookies.set("bannerShown", "true");
   };
   
