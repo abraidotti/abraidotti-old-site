@@ -31,22 +31,21 @@ function showSlides(n) {
 
 $(document).ready(function(){
 
-  // add visitation check cookie
-  if Cookies.get('newUser' === null) {
-    Cookies.set("newUser", 'true');
-  };
+  // Cookies.set("bannerShown", "");
 
-  if (Cookies.get("newUser" === 'true')) {
-    $(".newUser-banner").show(200);
-    Cookies.set("newUser", 'false');
+  if (Cookies.get("bannerShown") === "true") {
+    // do nothing
   } else {
-    Cookies.set("newUser", 'true');
+    $(".newUser-banner").show(200);
+    console.log("New user banner shown.");
+    Cookies.set("bannerShown", "true");
   };
   
   //if user is new, user can hide banner
   $("#newUser-banner-btn").click(function(){
     console.log('New user banner hidden.');
     $(".newUser-banner").hide(200);
+    Cookies.set("bannerShown", "false");
   });
 
   showSlides(slideIndex);
