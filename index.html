@@ -31,7 +31,9 @@
 	<div class="container newUser-banner">
 		<div class="row">
 			<div class="col">
-				<h2>Hello, new user.</h2>
+				<h2>Hi there.</h2>
+				<p>If this is your first visit, please check out my
+				projects below.</p>
 				<button id="newUser-banner-btn">Hide this banner</button>
 			</div>
 		</div>
@@ -75,33 +77,33 @@
       		<img src="images/sandro.jpg" class="img-profile">
         </div>
         <div class="col-md-4">
-        	<h1 class="display-2">Hi.</h1>
-	        <p>I'm Sandro.</p> 
-	      	<p>I code for fun, write stories, and play in a band. I'm currently learning web development.</p>
+        	<h1 class="display-2">hi.</h1>
+	        <p>I'm Sandro.<br> 
+	      	I code for fun, write stories, and play in a band. I'm currently learning web development.</p>
        	</div>
     		<div class="col-md-2"></div>
     	</div>
-    </div>
+    
 		<hr>
-    <div class="container">
+    
       <div class="row">
         <div class="col-md-4">
-          <h2>Currently</h2>
+          <h2>currently</h2>
           <p>I'm learning web development.</p>
           <p>I like my code clean and minimal.</p>
         </div>
         <div class="col-md-4">
-          <h2>Foreground</h2>
+          <h2>foreground</h2>
           <p>I just left a job in marketing to work on coding full-time.</p>
           <p>I know book and music manufacturing and distribution, social media marketing, and web analytics.</p>
        	</div>
         <div class="col-md-4">
-          <h2>Background</h2>
+          <h2>background</h2>
           <p>I've worked creative jobs in a number of fields.</p>
           <p>I've gotten burned from making metal and glass art, working in a kitchen, and teaching academic English.</p>
         </div>
 			</div>
-		</div>
+		
 	</div>
 	</section>
 	<!-- end about me -->
@@ -110,37 +112,191 @@
 
 	<!-- start projects section -->
 	<section id="projects">
-	<h1 style: align="center">projects</h1>
-		<div class="container-fluid">  	
+		<div class="container">  
+			<h1 class="project-header">projects</h1>	
     	<div class="row">
     	  
     	  <!-- first project -->
-    	  <div class="col">
-    	  	<div class="card" style="width: 20rem;">
-  					<img class="card-img-top" src="#" alt="script screencap">
+    	  <div class="col-sm-12 col-md-6">
+    	  	<div class="card">
+  					<img class="card-img-top" src="#">
 	  				<div class="card-body">
-	    				<h4 class="card-title">Minit Script</h4>
-	    				<p class="card-text">I built a micro-init script to scaffold a simple website for learning and practice.</p>
-	    				<a href="projects/minit/index.html" target="_blank" class="btn btn-primary">Open in new tab</a>
+	    				<h4 class="card-title">Minit</h4>
+	    				<h6 class="card-text">(Short for micro-initiation.)</h6>
+	    				<p class="card-text">A script to scaffold a simple website for learning and practice.</p>
+	    				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#minitModal">
+	    				view script in a modal
+	    			</button>
 	  				</div>
+					</div>
+
+					<!-- Minit script modal -->
+					<div class="modal fade" id="minitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Minit</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+						      	<br>
+
+						      	<p>If you're new to learning front-end development, here's a handy script to scaffold a simple html-css-js site. I called it minit, short for micro init.</p>
+
+						      	<p>First, open a new file in a text editor and paste in these two lines:</p>
+
+					      	<div class="code-block">
+										#!/bin/bash<br>
+										#Minit is a tiny script for tiny sites.<br>
+									</div>
+
+										<br>
+										<p>That first line starts with a shebang - #! - and this tells the system to follow the subsequent command. I'm using Bash, but if your shell is different, you'll want to update this line. I also recommend you add a comment that briefly describes the project, which I've done there.</p>
+										<br>
+
+										<p>Next, we'll greet the user with the $USER variable -- this reads in the system's current username.</p>
+										<p>We'll follow this up with a request for input. We can print to the screen by using the echo command:</p>
+
+									<div class="code-block">
+										echo "Hello, $USER!"<br />
+										echo "Please give me a name for the init directory:"<br>
+										<br>
+										read dirName<br>
+										<br>
+									</div>
+
+										<br>
+										<p>Now we'll want to check if the input is blank and/or if the directory is already present:</p>
+									
+
+									<div class="code-block">
+										#Check if input is blank<br />
+										if [ -z "$dirName" ]<br />
+										  then<br />
+										    echo "No argument supplied"<br />
+										    exit<br />
+										fi<br />
+										<br />
+										if [ -d "$dirName" ]<br />
+										then<br />
+										  echo "The directory already exists!"<br />
+										  read answer<br />
+										  if [ $answer != 'y' ]<br />
+										  	then<br />
+										      exit<br />
+										fi<br />
+										<br />
+									</div>
+
+									<br>
+									<p>Take note that every loop ends in an "fi." This tells the system to end the if loop (and is analagous to "endif.")</p> 
+									<br>
+									<p>Now we'll want to build the directory structure and confirm its location:</p>
+
+									<div class="code-block">
+										else<br>
+										echo "Initializing $dirName at $PWD"<br>  mkdir $dirName &amp;&amp; cd $dirName &amp;&amp;
+									  touch index.html<br>
+									  mkdir -p $PWD/css &amp;&amp; touch css/styles.css &amp;&amp; mkdir -p $PWD/js &amp;&amp; touch js/main.js<br>
+										<br>
+									</div>
+
+									<br>
+									<p>We'll add some boilerplate code to index.html:</p>
+
+									<div class="code-block">
+										echo "&lt;html&gt;<br />
+										&lt;head&gt;<br />
+										&lt;title&gt;$dirName&lt;/title&gt;<br />
+										&lt;meta charset="utf-8"&gt;<br />
+										&lt;link rel='stylesheet' type='text/css' href='./css/styles.css'&gt;<br />
+										&lt;script type='text/javascript' src='./js/main.js'&gt;&lt;/script&gt;<br />
+										&lt;/head&gt;<br />
+										<br />
+										&lt;body&gt;<br />
+										&lt;h1&gt;Hello, World!&lt;/h1&gt;<br />
+										&lt;/body&gt;<br />
+										&lt;/html&gt;" &gt; $PWD/index.html<br />
+										<br />
+									</div>
+
+									<br>
+									<p>And we'll make sure main.js works:</p>
+
+									<div class="code-block">
+										echo "document.addEventListener('DOMContentLoaded', function(){	<br />
+										console.log('main.js is hooked up!');<br />
+										});" &gt; $PWD/js/main.js<br />
+										<br />
+										echo "$dirName scaffold initialized."<br />
+										<br />
+										fi
+									</div>
+
+									<p>And there's your first Unix script! We're not done yet, though.</p>
+									<br>
+									<p>Your next step is to navigate in your finder to the file, right-click on it, and hit "get info."</p>
+
+									<p>You'll see a "sharing and permissions" tab at the bottom. Hit the padlock at the bottom to unlock it. You'll need to provide your password as well. Once you unlock it, this file will be able to read and write.</p>
+									<img src="images/minit-unlock.png" class="modal-image">
+
+									<p>Next, you'll need to save the file with a .sh extension, and then type the following command at your Bash prompt:
+									<pre>chmod 700 minit.sh</pre>
+								This tells the system your script is executable.</p>
+
+									<p>To run the file, paste it into your Sites directory and type <pre>./minit.sh</pre></p>
+
+					      </div><!-- end modal code blocks -->
+					      
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					      </div>
+					    </div>
+					  </div>
 					</div>
     		</div><!-- end first project -->
     		
     		<!-- second project -->
-    		<div class="col">
-    	  	<div class="card" style="width: 20rem;">
-  					<img class="card-img-top" src="#" alt="OO JS screencap">
+    		<div class="col-sm-12 col-md-6">
+    	  	<div class="card">
+  					<img class="card-img-top" src="#">
   					<div class="card-body">
-    					<h4 class="card-title">Object Oriented JS exercise</h4>
-    					<p class="card-text">I build an object that user can modify and instantiate.</p>
-    					<a href="#" class="btn btn-primary">Open in new tab</a>
-  					</div>
+    					<h4 class="card-title">Object Oriented JS</h4>
+    					<h6 class="card-text">A code block.</h6>
+    					<p class="card-text">Build a short sequence of inherited objects.</p>
+    					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#my-OO-content" aria-expanded="false" aria-controls="my-OO-content">Expand
+  						</button>
+							</p>
+								<div class="collapse" id="my-OO-content">
+	  							<div class="card card-body" data-toggle="popover" data-content="Take a look at this code.">
+<pre>var Rock = function(size, color, hardness){
+this.size = size;
+this.color = color;
+this.hardness = hardness;
+}
+
+var Gemstone = function(size, color, hardness, lustre, crystalSize){
+Rock.apply(this, arguments);
+this.lustre = lustre;
+this.crystalSize = crystalSize;
+}
+
+var quartz = new Rock('large', 'rose', 7);
+var diamond = new Gemstone('large', 'clear', 10, 'brilliant', 'small');</pre>
+	  							</div>
+	  							
+								</div>
+								<!-- hides the collapsible content -->
+								<script>$('#my-OO-content').collapse('hide');</script>
+
+  					</div><!-- ends card body -->
 					</div>
     	  </div><!-- end second project -->
     	
     	</div><!-- end projects row -->
     </div><!-- end projects container -->
-	<!-- end projects section -->
 
 	<hr>
 	

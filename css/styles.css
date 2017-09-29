@@ -30,19 +30,15 @@ nav .nav {
 }
 
 nav .nav a:hover {
-    color: #77F0EE;
-    text-decoration: underline;
+  color: #77F0EE;
+  text-decoration: underline;
 }
 
-/*main area mods*/
+/* about me */
 .main-about-me {
-  padding: 170px;
-	margin-top: 10px;
+  /*padding: 170px;*/
+	margin-top: 20px;
 	margin-bottom: 10px;
-}
-
-.about-me-block {
-  display: inline-block;
 }
 
 .img-profile {
@@ -51,15 +47,41 @@ nav .nav a:hover {
 	border-radius: 50%;
 }
 
+/* projects */
 
-/* gallery CSS */
+.project-header {
+  text-align: center;
+
+}
+
+
+
+/* minit script */
+
+.code-block {
+  border: 2px solid black;
+  border-radius: 0px;
+  background-color: #E1E9E8;
+}
+
+.modal-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+
+/* gallery  */
 
 .mySlides {display:none}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 300px;
+  max-height: 300px;
+  min-height: 400px;
   position: relative;
   margin: auto;
 }
@@ -72,10 +94,10 @@ nav .nav a:hover {
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: grey;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 0.4s ease;
   border-radius: 0 3px 3px 0;
 }
 
@@ -87,7 +109,7 @@ nav .nav a:hover {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: #f2f2f2;
+  background-color: #666;
 }
 
 /* Caption text */

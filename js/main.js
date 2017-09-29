@@ -26,13 +26,21 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
+  console.log("Gallery displayed.");
 }
 // end gallery
 
 $(document).ready(function(){
 
+    // enable collapsible sections
+    $('.collapse').collapse();
 
-  //checks a cookie's value even if it doesn't exist yet
+    // enable popovers
+    $('[data-toggle="popover"]').popover({
+      container: 'body'
+    });
+    
+  // checks a cookie's value even if it doesn't exist yet
   if (Cookies.get("bannerShown") === "true") {
     // do nothing
   } else {
@@ -42,7 +50,7 @@ $(document).ready(function(){
     Cookies.set("bannerShown", "true");
   };
   
-  //if user is new, user can hide banner
+  // if user is new, user can hide banner
   $("#newUser-banner-btn").click(function(){
     console.log('New user banner hidden.');
     $(".newUser-banner").hide(200);
