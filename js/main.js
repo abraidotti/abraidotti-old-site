@@ -16,30 +16,34 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+    slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
   console.log("Gallery displayed.");
 }
 // end gallery
 
-$(document).ready(function(){
+$(document).ready(function() {
 
-    // enable collapsible sections
-    $('.collapse').collapse();
+  // enable collapsible sections
+  $('.collapse').collapse();
 
-    // enable popovers
-    $('[data-toggle="popover"]').popover({
-      container: 'body'
-    });
-    
+  // enable popovers
+  $('[data-toggle="popover"]').popover({
+    container: 'body'
+  });
+
   // checks a cookie's value even if it doesn't exist yet
   if (Cookies.get("bannerShown") === "true") {
     // do nothing
@@ -49,9 +53,9 @@ $(document).ready(function(){
     // create the cookie and set it to true
     Cookies.set("bannerShown", "true");
   };
-  
+
   // if user is new, user can hide banner
-  $("#newUser-banner-btn").click(function(){
+  $("#newUser-banner-btn").click(function() {
     console.log('New user banner hidden.');
     $(".newUser-banner").hide(200);
     Cookies.set("bannerShown", "false");
@@ -74,8 +78,8 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
+      }, 800, function() {
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
